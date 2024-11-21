@@ -64,10 +64,10 @@ public class DBManager extends SQLiteOpenHelper {
                 bookPublisher.setYear(cursor.getString(3));
                 bookPublisher.setPage(cursor.getString(4));
                 bookPublisher.setAddress(cursor.getString(5));
-                bookPublishers.add(bookPublisher);
+                bookPublishersList.add(bookPublisher);
             } while (cursor.moveToNext());
         }
-        return bookPublishers;
+        return bookPublishersList;
     }
 
     public List<BookPublisher> getTitleBooksOlderTenYears() {
