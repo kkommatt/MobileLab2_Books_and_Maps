@@ -28,7 +28,7 @@ public class DBManager extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addStudent(BookPublisher bookPublishers) {
+    public void addBook(BookPublisher bookPublishers) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(Constants.COLUMN_NAME_AUTHOR, bookPublishers.getAuthor());
@@ -41,7 +41,7 @@ public class DBManager extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void deleteAllStudents() {
+    public void deleteAllBooks() {
         final List<Integer> ids = getAllBooks().stream().map(BookPublisher::getId).collect(Collectors.toList());
         SQLiteDatabase db = this.getWritableDatabase();
         ids.forEach(id -> db.delete(Constants.TABLE_NAME, Constants.COLUMN_NAME_ID + " = ?", new String[]{String.valueOf(id)}));
