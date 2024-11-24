@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -37,7 +40,12 @@ dependencies {
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
     implementation libs.play.services.maps
+    implementation libs.navigation.ui
+    implementation libs.navigation.fragment
+    implementation libs.play.services.location
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+    implementation(libs.okhttp)
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 }

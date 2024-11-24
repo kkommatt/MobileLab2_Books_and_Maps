@@ -65,11 +65,11 @@ public class BookPublisher {
         this.page = page;
     }
 
-    public String getAddress()
-    {
+    public String getAddress() {
         return address;
     }
-    public void setAddress(String address){
+
+    public void setAddress(String address) {
         this.address = address;
     }
 }

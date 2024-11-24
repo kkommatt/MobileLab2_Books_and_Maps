@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/BookId"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/contactNameSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/BookId"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        tools:text="contachNameSurname" />
+
+    <TextView
+        android:id="@+id/contactNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/BookId"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        tools:ignore="TextSizeCheck"
+        tools:text="contactNumber" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/BookId"
+        android:layout_marginTop="10dp"
+        android:background="#DAD8D8" />
+
+</RelativeLayout>
