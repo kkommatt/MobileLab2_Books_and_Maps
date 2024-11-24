@@ -109,6 +109,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng publisherLocation = new LatLng(latitude, longitude);
         mMap.addMarker(new MarkerOptions().position(publisherLocation).title("Publisher Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(publisherLocation, 15));
+        fetchCurrentLocation();
     }
 
     private void buildRoute(LatLng origin, LatLng destination) {
